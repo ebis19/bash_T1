@@ -30,10 +30,8 @@ else
 fi
 
 
+#a)
 #
-#
-
-
 #b) El script tiene dos parametros : [Archivo] [Char] 
 # En el primero se indica el archivo a prosesar
 # En el segundo la opcion deseada (L,C,M) 
@@ -44,3 +42,17 @@ fi
 # $$ el id de proceso 
 # $USER El usuario que esta ejecutando el script
 # $HOME la ruta del usuario
+#
+#f)las diferentes comillas son    
+
+# "" Encierran textos y interpreta las variables dentro de las comillas
+# ej echo " EL USUARIO ES $USER"  
+#    EL USUARIO ES user1
+# '' Tambien encierran textos pero a diferenciade las anteriores se intrepreta de forma literal 
+# ej echo " EL USUARIO ES $USER"  
+#    EL USUARIO ES $USER 
+
+# `` Ejecutan el codigo contenidas en ellas 
+# echo `pwd`
+# /home/user1
+
