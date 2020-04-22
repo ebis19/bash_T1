@@ -38,4 +38,9 @@ fi
 # En el primero se indica el archivo a prosesar
 # En el segundo la opcion deseada (L,C,M) 
 #e) La variable "$#" indica la cantidad de parametros ingresados 
-#
+#Otras variables expeciales de bash son:
+# $i ($1,$2 ... $n) indica el parametros del script 
+# $@ muestras todos los parametros 
+# $$ el id de proceso 
+# $USER El usuario que esta ejecutando el script
+# $HOME la ruta del usuario
