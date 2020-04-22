@@ -31,9 +31,9 @@ fi
 
 
 
-#a) El objetivo del script es analizar un archivo plano y 
-#   contar las lineas y cantidad de caracteres de un archvio
-#   y el tamaño de la linea con mayor cantidad de caracteres
+#a) El objetivo del script segun el parametro elegido del usuario es
+#   contar las lineas,cantidad de caracteres de un archivo
+#   o indicar el tamaño de la linea con mayor cantidad de caracteres
 
 
 
