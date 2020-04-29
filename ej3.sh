@@ -49,16 +49,14 @@ done
 
 
 
-md51=$(ls | awk '/^.*-[0-9]{1,2}.log$/' | md5sum |awk '{ print $1}')
-
+md51="$(ls | awk '/^.*-[0-9]{1,2}.log$/' | md5sum |awk '{ print $1}')"
 while(true)
 do
-    md52=$(ls | awk '/^.*-[0-9]{1,2}.log$/' | md5sum |awk '{ print $1}')
-
+    md52="$(ls | awk '/^.*-[0-9]{1,2}.log$/'| md5sum |awk '{ print $1}')"
     if [ "$md51" != "$md52" ] ; then
         eliminar
     fi
-    md51=$md5
+    md51=$md52
     sleep $SECOND
 done
 
