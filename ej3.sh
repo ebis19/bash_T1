@@ -8,21 +8,24 @@ function help () {
 
 function eliminar () {
     eliminar=$(ls | sort -V|awk '/^.*-[0-9]{1,2}.log$/{
-    n=match($1,/[0-9]{2}/)
-    noeliminar[substr($1,0,n-1)]= $1
-    eliminar[$1]=0;
+    n=match($1,/-[0-9]{2}.log/)
+    noeliminar[substr($1,0,n)]= $1
+    eliminar[$1]=substr($1,0,n);
 }
 END{
-    for (i in noeliminar)
-        delete eliminar[noeliminar[i]]
+    for (i in noeliminar){   
+        if(i!="")
+            delete eliminar[noeliminar[i]];
+        }
     for (i in eliminar)
          print i;
 }')
+
 for archivo in $eliminar ; do
     print $archivo
     rm $archivo
 done
-echo "elimino log viejos"
+
 }
 
 while getopts t:f:h opt; do
