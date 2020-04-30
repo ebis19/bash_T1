@@ -1,8 +1,9 @@
 #!/bin/bash
 
 function help () {
-    echo "$0 -t Numero, el intervalo de los segundo entre que se verifica si se ingreso un nuevo archivo " 
-    echo "$0 -f Directorio,el directorio donde se busca los archivos "
+    echo ""
+    echo "$0 -t Numero,(default = 2) el intervalo de los segundo entre que se verifica si se ingreso un nuevo archivo "
+    echo "$0 -f Directorio,el directorio donde se busca los archivos , si no se indica se ejecutara en el directorio del script"
     echo "$0 -d se ejecuta el script en modo demonio"
 }
 
@@ -44,11 +45,15 @@ do
     sleep "$SECOND"
 done
 }
-
+# valores de default 
+SECOND="2" 
+DIR="."
 
 if [ "$2" == "--help" ] ;then
     help
 fi
+
+
 
 while getopts t:f:h:d opt; do
   case $opt in
@@ -62,8 +67,8 @@ while getopts t:f:h:d opt; do
       help
       exit 0
       ;;
-    d)
-        nohup "$0" "-t $SECOND" &
+    d) 
+       nohup "$0" "-f $DIR -t $SECOND" >& /dev/null &
         exit
       ;;
     \?) #unrecognized option - show help

@@ -1,0 +1,48 @@
+bash: - : opción no válida
+Modo de empleo:	bash [opción GNU larga] [opción] ...
+	bash [opción GNU larga] [opción] archivo-de-guión ...
+Opciones GNU largas:
+	--debug
+	--debugger
+	--dump-po-strings
+	--dump-strings
+	--help
+	--init-file
+	--login
+	--noediting
+	--noprofile
+	--norc
+	--posix
+	--rcfile
+	--restricted
+	--verbose
+	--version
+Opciones del intérprete de ordenes:
+	-ilrsD o -c orden o -O shopt_option 	 	 (invocación solamente)
+	-abefhkmnptuvxBCHP o -o opción
+bash: - : opción no válida
+Modo de empleo:	bash [opción GNU larga] [opción] ...
+	bash [opción GNU larga] [opción] archivo-de-guión ...
+Opciones GNU largas:
+	--debug
+	--debugger
+	--dump-po-strings
+	--dump-strings
+	--help
+	--init-file
+	--login
+	--noediting
+	--noprofile
+	--norc
+	--posix
+	--rcfile
+	--restricted
+	--verbose
+	--version
+Opciones del intérprete de ordenes:
+	-ilrsD o -c orden o -O shopt_option 	 	 (invocación solamente)
+	-abefhkmnptuvxBCHP o -o opción
+bash:   -t 10: No existe el archivo o el directorio
+./ej3.sh: línea 49: 2: orden no encontrada
+./ej3.sh: línea 50: .: se requiere un argumento de nombre de archivo
+.: uso: . nombredearchivo [argumentos]
