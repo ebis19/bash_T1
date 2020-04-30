@@ -26,13 +26,12 @@ END{
 }')
 
 for archivo in $eliminar ; do
-    print $archivo
     rm $archivo
 done
 }
 
 function inicio() {
-    
+
 eliminar
 md51="$(ls | awk '/^.*-[0-9]{1,2}.log$/' | md5sum |awk '{ print $1}')"
 while(true)
@@ -64,7 +63,7 @@ while getopts t:f:h:d opt; do
       exit 0
       ;;
     d)
-        nohup "$0"  "-f $DIR -t $SECOND"
+        nohup "$0" "-t $SECOND" &
         exit
       ;;
     \?) #unrecognized option - show help
