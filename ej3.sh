@@ -58,10 +58,10 @@ fi
 while getopts t:f:h:d opt; do
   case $opt in
     f)
-    DIR=$OPTARG
+    DIR="$OPTARG"
       ;;
     t)
-      SECOND=$OPTARG
+      SECOND="$OPTARG"
       ;;
     h)
       help
