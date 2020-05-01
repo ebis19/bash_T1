@@ -1,12 +1,22 @@
 #!/bin/bash
 
+
+
 function help () {
     echo ""
+        echo "ingresando al menu de ayuda de script";
+    echo "Este script se ha creado con la finalidad de eliminar archivos log que se encuentren en un directorio de la ultima semana";
+    echo "Dejando solamente uno de los archivos de log en el mismo.Log actualizado.";
+    echo "Ejecución del script";
+    echo "./ej3.sh -f 'path_de_los_archivos_de_log' -t 'segundos' ";
+    echo "El parámetro -f 'path_de_los_archivos_de_log' puede ser una ruta absoluta o relativa";
+    echo "El parámetro -t 'intervalo de tiempo a evaluar el directorio'";
+        echo "ejecucion";
     echo "$0 -t Numero,(default = 2) el intervalo de los segundo entre que se verifica si se ingreso un nuevo archivo "
     echo "$0 -f Directorio,el directorio donde se busca los archivos , si no se indica se ejecutara en el directorio del script"
-    echo "$0 -d se ejecuta el script en modo demonio"
+    echo "$0 se ejecuta el script en modo demonio"
+        exit 0;
 }
-
 
 
 
