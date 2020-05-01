@@ -11,7 +11,7 @@ function help () {
 
 
 function eliminar () {
-    eliminar=$(ls | sort -V|awk '/^.*-[0-9]{1,2}.log$/{
+    eliminar=$(ls $DIR | sort -V|awk '/^.*-[0-9]{1,2}.log$/{
     n=match($1,/-[0-9]{2}.log/)
     noeliminar[substr($1,0,n)]= $1
     eliminar[$1]=substr($1,0,n);
@@ -27,17 +27,17 @@ END{
 }')
 
 for archivo in $eliminar ; do
-    rm $archivo
+    rm "$DIR/$archivo"
 done
 }
 
 function inicio() {
 
 eliminar
-md51="$(ls | awk '/^.*-[0-9]{1,2}.log$/' | md5sum |awk '{ print $1}')"
+md51="$(ls $DIR | awk '/^.*-[0-9]{1,2}.log$/' | md5sum |awk '{ print $1}')"
 while(true)
 do
-    md52="$(ls | awk '/^.*-[0-9]{1,2}.log$/'| md5sum |awk '{ print $1}')"
+    md52="$(ls $DIR | awk '/^.*-[0-9]{1,2}.log$/'| md5sum |awk '{ print $1}')"
     if [ "$md51" != "$md52" ] ; then
         eliminar
     fi
